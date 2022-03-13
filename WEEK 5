@@ -1,0 +1,19 @@
+# Write a python program to read four numbers (representing the four octets of an IP) and print the next five IP address
+
+# Eg:
+# Input:
+# 172 16 255 252
+# ----------Output---------
+# 172 16 255 253
+# 172 16 255 254
+# 172 16 255 255
+# 172 17 0 0
+# 172 17 0 1
+
+
+# ip = input("Input IP address:")
+# import ipaddress
+# start_ip = ipaddress.IPv4Address(int(ipaddress.IPv4Address(ip))+1)
+# end_ip = ipaddress.IPv4Address(int(ipaddress.IPv4Address(ip))+6)
+# for ip_int in range(int(start_ip), int(end_ip)):
+#     print(ipaddress.IPv4Address(ip_int))
