@@ -1,0 +1,12 @@
+ Odd numeros in List
+ 
+ 
+ counter = 0
+ lista = []
+
+ while counter <= 9:
+     number = int(input('Hey, give me a number: '))
+     counter += 1
+     if number%2 == 0:
+         lista.append(number)
+ print(set(lista))
