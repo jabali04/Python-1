@@ -1,0 +1,32 @@
+ # Create a script that will request 2 numeros and return the results of the addition, subtraction, multiplication and division of both numeros:
+ 
+ primero = int(input('Dame un numero: '))
+ segundo = int(input('Dame otro: '))
+ suma = primero+segundo
+ resta = primero-segundo
+ division = primero//segundo
+ multiplicacion = primero*segundo
+ print('El resultado de la suma es: ', suma)
+ print('El resultado de la resta es: ', resta) print('El resultado de la division es: ', division)
+print('El resultado de la multiplicacion es: ', multiplicacion)
+
+ # Create a script that will ask the user to enter name and salary and will perform the following calculation: REVISAR TEMA DEL 0.
+ salario_neto = int(input('Cual es tu salario neto?: '))
+ ccss = 10.6 * salario_neto / 100
+ popular = 1.5 * salario_neto / 100
+ rebajos = ccss - popular
+ neto = salario_neto - ccss - popular
+ print('La caja te quita: ', ccss)
+ print('El popular te quita: ', popular)
+ print('Tu salario neto es: ', neto)
+
+ # This script needs to be able to calculate the final sales price of any item based on the following features:
+ costo = int(input("What is the cost per unit?: "))
+ cantidad = int(input("How many items you have?: "))
+ neto = costo * cantidad
+ descuento = neto - 10 * neto / 100
+ impuestos= 13 * descuento / 100 + descuento
+ print('Precio por unidad', costo)
+ print('Precio neto total: ', neto)
+ print('Precio con descuento: ', descuento)
+ print ('Precio final mas taxes: ', impuestos)
