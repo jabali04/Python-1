@@ -1,0 +1,63 @@
+ Rock Paper Scissors.
+ player1 = 0
+ player2 = 0
+ counter = 0
+ lista = []
+ lista2 = []
+ lista3 = []
+ lista4 = []
+ while counter < 5:
+     counter = counter + 1
+     player1 = input('Player 1. Choose "rock-paper-scissors": ')
+     player2 = input('Player 2. Choose "rock-paper-scissors": ')
+     if player1 == "rock" and player2 == 'scissors' or player1 == "paper" and player2 == 'rock' or player1 == "scissors" and player2 == 'paper':
+         lista.append('x')
+         print('Player 1 won this round')
+         if len(lista) >= 3:
+             print('Player 1 won the game')
+             break
+     elif player1 == "rock" and player2 == 'rock' or player1 == "paper" and player2 == 'paper' or player1 == "scissors" and player2 == 'scissors':
+         lista2.append('x')
+         print('This round was a tie')
+         if len(lista2) >= 3:
+             print("No one won this game: It's a tie")
+             break
+     elif player1 == "rock" and player2 == 'paper' or player1 == "paper" and player2 == 'scissors' or player1 == "scissors" and player2 == 'rock':
+         lista3.append('x')
+         print('Player 2 won the round')
+         if len(lista3) >= 3:
+             print("Player 2 won the game")
+             break
+     if len(lista) == 2 and len(lista2) == 2 or len(lista3) == 2 and len(lista4) == 2:
+         print('No one won this game.')
+
+ Print variable "numb" as long as "numb" is less or equal to 8. numb should start at 1. numb should be added 1.5 each time it is executed (use shortcut operators)
+ numb = 1
+ while numb <= 8:
+     print (numb)
+     numb =+ numb + 1.5
+
+
+ Average LoopAssignment. Take integer inputs from user until he/she presses q (Ask to press q to quit after every integer input). Print average and product of all numero
+ numero = int(input('GIVE ME A numero: '))
+ confirmar = input('PRESS ENTER TO COTINUE, "Q" TO STOP THE PROGRAM AND GET THE RESULTS')
+ count = 1
+
+ while confirmar != 'q':
+     numero = numero + int(input('GIVE ME ANOTHER numero: '))
+     confirmar = input('PRESS ENTER TO COTINUE, "Q" TO STOP THE PROGRAM AND GET THE RESULTS: ')
+     count += 1
+     if confirmar == 'q':
+         print('The average is:', numero/count)
+         print('The product is:')
+
+
+  Factorial Calculation
+ from os import sep
+ num = int(input('GIVE ME A NUMBER: '))
+ num2 = num
+ factorial = 1
+ while num > 0:
+     factorial = factorial * num
+     num -= 1
+ print('The factorial !',num2, ' ', 'is: ', factorial, sep='')
