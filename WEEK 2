@@ -1,0 +1,65 @@
+ ## Write a Python program to convert temperatures to and from celsius, FAHRENHEITS.
+
+option = input('MEDIDA ACTUAL>> ELIGE F PARA FAHRENHEITS, C PARA CELCIUS: ' )
+ if option == "F":
+     print('Elegiste FAHRENHEITS.')
+     valor3 = int(input('Dame el valor que deseas convertir: '))
+     print(valor3, "FAHRENHEITSs es igual a ", (valor3 - 32) * 5 / 9, "CELCIUS")
+ elif option == 'C':
+     print('Elegiste CELCIUS.')
+     valor4 = int(input('Dame el valor que deseas convertir: '))
+     print(valor4, "CELCIUS es igual a ", (valor4* 9/5) + 32, "FAHRENHEITSs")
+ else: print ('Option invalida')
+
+## Pair/Odd Script.... El operador módulo no hace otra cosa que devolver el resto de la división entre los dos operandos.
+ numero = int(input('Give me a numero: '))
+ if (numero % 2) == 0:
+     print('This is a pair numero')
+ else:
+     print('This is an odd numero')
+
+ ## Generation Demographics Script. Create a script that takes the following data as input:
+ name = iNput('Give me your first name: ')
+ lastname = input('Give me your lastname: ')
+ age = int(input('How old are u?: '))
+ final = 2022-age
+ print (final)
+ print ('Full name: ', name, lastname)
+ print ('Year of birth: ', final)
+ if final >= 1966 and final <= 1980:
+     print('Generation: X')
+ elif final >= 1981 and final <= 1996:
+     print('Generation: Millenials')
+ elif final >= 1997 and final <= 2012:
+     print('Generation: Z')
+ elif final >= 2013:
+     print('Generation: Tooo young!')
+ else:
+     print('I do not know what to say :(')
+
+## Write a Python program to check a triangle is equilateral, isosceles or scalene.
+ valor5 = int(input('Valor de un lado del triangulo: '))
+ valor6 = int(input('Valor de otro lado del triangulo: '))
+ valor7 = int(input('Valor de ultimo lado del triangulo: '))
+ print('X es igual a ', valor5, '|   Y es igual a ', valor6, '|   Z es igual a ', valor7)
+ if valor5 == valor6 == valor7:
+     print('So... you have an equilateral triangle')
+ elif valor5 == valor6 or valor5 == valor7 or valor6 == valor7:
+     print('So... you have an isosceles triangle')
+ else:
+     print ('So... you have an scalene triangle ')
+
+## Create a login prompt that will request username and password
+ user = 'Andres'
+ password = 'Andres123'
+ valor8 = input('Give me your username: ')
+ valor9 = input('Now, give me your password: ')
+
+ if valor8 == user and valor9 == password:
+     print('Sucesfull login!')
+ elif valor8 == user and valor9 != password:
+     print('Password is incorrect')
+ elif valor8 != user and valor9 == password:
+     print('Username is incorrect')
+ else:
+     print('Username and password are incorrect')
