@@ -1,1 +1,6 @@
-ola 
+import datetime
+userDate = datetime.datetime.strptime(input('Hola, ingrese la fecha origen en formato dd/mm/aaaa:  '), "%d/%m/%Y")
+days = int(input('Cuántos días quiere sumarle a la fecha origen?'))
+dayslater = userDate + datetime.timedelta(days)
+newDate = dayslater.strftime("%A %B %d, %Y")
+print("Desde la fecha origen, " + str(days) + " días después, será ", newDate)
