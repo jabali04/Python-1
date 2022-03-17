@@ -1,3 +1,5 @@
+Ejercico 1.
+
 from datetime import date
 import calendar
 import random
@@ -7,3 +9,7 @@ curr_date = (calendar.day_name[today.weekday()])
 mytuple = ("Sunny", "Cloudy", "Windy", "Foggy", "Rainy")
 ran = random.choice(mytuple)
 print('Hola {}. Today is {} and the wheather is {}'.format(name, curr_date , ran))
+
+
+Ejercico 2.
+
