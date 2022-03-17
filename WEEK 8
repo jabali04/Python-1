@@ -13,3 +13,18 @@ print('Hola {}. Today is {} and the wheather is {}'.format(name, curr_date , ran
 
 Ejercico 2.
 
+error = ('404', '500', '418', 'No error message')
+meaning = ('Not found', 'Internal server error', "I'am a teapot", 'SUCCESS' )
+usropt = int(input('Select an option [From 1-4]: '))
+template = 'Error: {}. Message: {}'
+
+if usropt == 1:
+  print(template.format(error[0], meaning[0]))
+elif usropt == 2:
+  print(template.format(error[1], meaning[1]))
+elif usropt == 3:
+  print(template.format(error[2], meaning[2]))
+elif usropt == 4:
+  print(template.format(error[3], meaning[3]))
+else:
+  print('This is not a valid option')
