@@ -1,0 +1,63 @@
+import datetime
+from datetime import date
+import subprocess
+useropt = (int(input('Hello, this is the "daily basis" program\n\nYou have the following options:\n\n [1] Ping program\n [2] Get the date\n [3] Next five days\n [4] Lived time\n\nSelect one of them [1-4]: ',)))
+today = date.today()
+
+#############
+def ping():
+    command = ['ping', '-n', '5', host]
+    return subprocess.call(command)
+#############
+def curdate():
+  d1 = today.strftime("%d/%m/%Y")
+  d2 = today.strftime("%B %d, %Y")
+  print('   ',d1)
+  print('   ',d2)
+#############
+def next5days():
+    days = 5
+    daysfinal = today + datetime.timedelta(days)
+    total = daysfinal.strftime("%A %B %d, %Y")
+    print(total)
+##############
+def litime(date1):
+    date1 = datetime.datetime.strptime(date1, '%Y/%m/%d').date()
+    today1 = datetime.date.today()
+    days = (today1-date1).days
+    months = ((today1.year - date1.year) *12) + (today1.month - date1.month)
+    weeks = int(round(days/7, 0))
+    print ('\n4You have lived: \n\n  Days = %s\n  weeks = %s\n  months = %s\n' % (days, weeks, months))
+def getbiddate():
+    litime(input('Enter your birthday date (AAAA/mm/dd): '))
+##############
+
+while useropt == 1 or useropt == 2 or useropt == 3 or useropt == 4:
+    if useropt == 1:
+        print('')
+        host = input('You are in the "ping" programm,\n\nPlease provide either an IP or Domain Name: ')
+        ping()
+        quit = input('\n\n\nPress "q" to quit or press any other key to go back to the main menu: ' )
+        if quit == 'q':
+            break
+    elif useropt == 2:
+        print('')
+        print('You are in the "current date" programm\n\nYou will get the current date in two differente formats \n')
+        curdate()
+        quit = input('\n\n\nPress "q" to quit or press any other key to go back to the main menu: ' )
+        if quit == 'q':
+            break
+    elif useropt ==3:
+        print('')
+        print('In 5 days the date will be: \n')
+        next5days()
+        quit = input('\n\n\nPress "q" to quit or press any other key to go back to the main menu: ' )
+        if quit == 'q':
+            break
+    elif useropt ==4:
+         print('')
+         getbiddate()
+         quit = input('\n\n\nPress "q" to quit or press any other key to go back to the main menu: ' )
+         if quit == 'q':
+            break
+    useropt = (int(input('Hello, this is the "daily basis" program\n\nYou have the following options:\n\n [1] Ping program\n [2] Get the date\n [3] Next five days\n [4] lolo\n\nSelect one of them [1-4]: ',)))
