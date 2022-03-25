@@ -16,3 +16,71 @@ print('The score is:', FinalScorel)
 
 ####################################################
 
+# Create three dictionaries: lloyd, alice, and tyler.
+# Give each dictionary the keys "name", "homework", "quizzes", and "tests".Have the "name" key be the name of the student (that is, lloyd's name should be "Lloyd") and the other keys should be an empty list. 
+
+lloyd = { 'name': 'lloyd', 'homework' : [], 'quizzes': [], 'tests': [] }
+alice = { 'name': 'alice', 'homework' : [], 'quizzes': [], 'tests': [] }
+tyler = { 'name': 'tyler', 'homework' : [], 'quizzes': [], 'tests': [] }
+
+#Add the following values to each of the students dictionaries... ETC
+lloyd['homework'] = 90.0,97.0,75.0,92.0
+lloyd['quizzes'] = 88.0,40.0,94.0
+lloyd['tests'] =75.0,90.0
+alice['homework'] = 100.0, 92.0, 98.0, 100.0
+alice['quizzes'] = 82.0, 83.0, 91.0
+alice['tests'] = 89.0, 97.0
+tyler['homework'] = 0.0, 87.0, 75.0, 22.0
+tyler['quizzes'] = 0.0, 75.0, 78.0
+tyler['tests'] = 100.0, 100.0
+
+# Below your code, create a list called students that contains lloyd, alice, and tyler.
+students = [ lloyd, alice, tyler]
+# for each student in your students list, print out that student's data, as follows:
+for i in students:
+    for key, value in i.items():
+        print(key, '---->', value)
+
+# Write a function average that takes a list of numbers and returns the average . The function should have 1 argument 
+def average():
+    total = sum(listnum)
+    totalflo = float(total)
+    print(totalflo / len(listnum))
+listnum = list(map(int, input('Give a list of numbers. Please use "," to separate each value: ').split(',')))
+average()
+
+
+# Write a function called get_average that takes a student dictionary (like lloyd, alice, or tyler) as input and returns his/her weighted average.
+
+student = int(input('Please choose the number for the student you would like to evaluate. 0 for Lloyd, 1 for Alice and 2 for Tyler:  '))
+def get_average(student):
+        homework = sum(students[student]['homework'])/len(students[student]['homework']) * 0.10
+        quizzes = sum(students[student]['quizzes'])/len(students[student]['quizzes']) * 0.30
+        tests = sum(students[student]['tests'])/len(students[student]['tests']) * 0.60
+        return(homework + quizzes + tests)   
+get_average(student)
+
+print(get_average(2))
+
+# Define a new function called get_letter_grade that has one argument called score. Expect score to be a number.
+
+def get_letter_grade(score):
+    if score >= 90:
+        print('Result: A')
+    elif score >= 80:
+        print('Result: B')
+    elif score >= 70:
+        print('Result: C')
+    elif score >= 60:
+        print('Result: D')
+    else:
+        print('Result: F to pay respect :C20')
+score = get_average(student)
+get_letter_grade(score)
+
+def get_class_average(students):
+    results = []
+    for i in range (3):
+        results.append(get_average(i))
+    print(results)
+get_class_average(students)
